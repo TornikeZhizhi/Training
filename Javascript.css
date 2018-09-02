@@ -650,3 +650,21 @@ input[type="submit"]{
     
 }
 
+
+.form2 {
+    margin-top: 100px;
+}
+
+
+
+
+.black {
+
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:black;
+    z-index: 1000;
+}

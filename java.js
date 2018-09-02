@@ -215,6 +215,22 @@ $(".bull").each(function(index){
 })	
 
 
+
+$(window).on("load",function(){
+
+	var shed = $("#bingo img").length - $(".bull").length
+	
+	for (var i = 0; i < shed; i++) {
+
+			
+		$("#bullets").append("<div class='bull'></div>")
+
+	}
+
+
+})
+
+
 // scrol top
 
 
@@ -228,26 +244,26 @@ $(".top a").click(function(){
 
 /// Oo
 
- $(document).ready(function () {
-    	 var hover_focus = false ;
-        $("#menu_pop").click(function () {
-            $('.select_menu_dropdown').toggleClass('for_dropdown');
-        })
+ // $(document).ready(function () {
+ //    	 var hover_focus = false ;
+ //        $("#menu_pop").click(function () {
+ //            $('.select_menu_dropdown').toggleClass('for_dropdown');
+ //        })
 
-		 $("#menu_pop").on("mouseover",function(){
-		    	hover_focus = true ;
-		    })
-		     $("#menu_pop").on("mouseout",function(){
-		    	hover_focus = false ;
-		    })
-		    $(document).click(function() {
-		        if(!hover_focus) {
-		              $('.select_menu_dropdown').removeClass('for_dropdown');             
-		        }
-		    }) ;
+	// 	 $("#menu_pop").on("mouseover",function(){
+	// 	    	hover_focus = true ;
+	// 	    })
+	// 	     $("#menu_pop").on("mouseout",function(){
+	// 	    	hover_focus = false ;
+	// 	    })
+	// 	    $(document).click(function() {
+	// 	        if(!hover_focus) {
+	// 	              $('.select_menu_dropdown').removeClass('for_dropdown');             
+	// 	        }
+	// 	    }) ;
 
 
-    });
+ //    });
 
 
  
@@ -271,8 +287,6 @@ $(".top a").click(function(){
 
  $(".texts, .texts2").keyup(function(event){
 
- 	console.log($(".texts").val().length)
- 	console.log($(".texts2").val().length)
  	if ($(".texts").val().length > 0 && $(".texts2").val().length > 0 ) {
  		$("#submit").removeAttr("disabled");
  		$("#submit").css("cursor","pointer");
@@ -294,3 +308,74 @@ $(".top a").click(function(){
  	}
 
  })
+
+
+
+// form 2
+
+
+
+// console.log(lowerCaseLetters)
+
+// var myInput = document.getElementById("pass")
+
+// $("#passsub").click(function(){
+
+
+// 	if(myInput.value.match(lowerCaseLetters)) {  
+//    			alert("sda")
+//   	} 
+
+var lowerCaseLetters = /[a-z]/g;
+var upperCaseLetters = /[A-Z]/g;
+var numbers = /[0-9]/g;
+$(window).keyup(function(){
+
+
+
+console.log($("#pass").val())
+
+if( $("#pass").val().match(lowerCaseLetters) ){
+
+	$("#letter").css("color","green")
+
+}else {
+	$("#letter").css("color","red")
+}
+
+if( $("#pass").val().match(upperCaseLetters) ){
+
+	$("#capital").css("color","green")
+
+}else {
+	$("#capital").css("color","red")
+}
+
+
+if( $("#pass").val().match(numbers) ){
+
+	$("#number").css("color","green")
+
+}else {
+	$("#number").css("color","red")
+}
+
+if ($("#pass").val().length >= 8) {
+
+	$("#length").css("color","green")
+}else {
+	$("#length").css("color","red")
+}
+
+
+})
+
+
+ 
+
+
+$(document).ready(function(){
+
+	$(".black").css("display","none");
+
+})
