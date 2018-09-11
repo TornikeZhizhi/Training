@@ -461,8 +461,10 @@ table tr td {
 }
 
 .test {
-    left: 1000px !important;
-    transform: scale(0);
+ /*left: 1000px !important;
+    top: 200px !important;*/
+    transform: translate(1500px,-260px) scale(0);
+    /*transform: scale(0);*/
 }
 
 
@@ -559,7 +561,7 @@ section {
 }
 
 .imgi2 {
-    animation: img2 .4s ease-out;
+    animation: img2 1s ease-out;
 }
 
 .but {
@@ -667,4 +669,28 @@ input[type="submit"]{
     left: 0;
     background:black;
     z-index: 1000;
+}
+
+
+.img_box {
+    display: inline-block;
+}
+
+.img_box img{
+    width: 200px
+}
+
+.modal-body img {
+    width: 200px;
+    text-align: center;
+}
+
+.modal-body {
+    text-align: center;
+}
+
+.main_bg {
+    background-color: antiquewhite;
+    width: 100%;
+    transition: .6s;
 }
