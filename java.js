@@ -248,7 +248,7 @@ $(window).on("load",function(){
 $(".top a").click(function(){
 	$("html, body").animate({
 		scrollTop : $("html").offset().top
-	},300,"linear");	
+	},1200,"linear");	
 })
 
 
@@ -508,11 +508,6 @@ $(document).ready(function(){
 
 })
 
-
-
-// $(".bg_test").after().css("background-size","100% 100%")
-
-$('.bg_test').after().css('transform', 'scale(1)');
 
 
 $('.bg_test').addClass("JS");

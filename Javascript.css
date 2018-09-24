@@ -733,6 +733,7 @@ input[type="submit"]{
     width: 100%;
     background-color: black;
     height:20px;
+    backface-visibility: hidden;
 }
 
 
@@ -740,7 +741,7 @@ input[type="submit"]{
     width: 0%;
     height: 100%;
     background-color: red;
-    animation: anime 3.4s ease-out;
+    animation: anime 7.4s ease-out;
     animation-fill-mode: forwards;
     display: flex;
     align-items: center;
