@@ -694,3 +694,105 @@ input[type="submit"]{
     width: 100%;
     transition: .6s;
 }
+
+
+  .jzoom {
+            position: absolute;
+            top:0;
+            right: 0;
+            width: 350px;
+            height: 350px;
+        }
+
+
+  .jzoom div:nth-child(2) {
+           width: 150px !important;
+           height: 150px !important;
+        }  
+
+      
+     .jzoom div:nth-child(3) {
+           width: 350px !important;
+           height: 350px !important;
+        }      
+
+.image_cont {
+    position: relative;
+    width: 530px;
+}
+
+  .imgs img {
+    width: 150px;
+    height: 150px;
+  }
+
+
+
+#wrapp {
+
+    width: 100%;
+    background-color: black;
+    height:20px;
+}
+
+
+.wraper {
+    width: 0%;
+    height: 100%;
+    background-color: red;
+    animation: anime 3.4s ease-out;
+    animation-fill-mode: forwards;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.wraper span{
+    color: #fff;
+    font-size: 35px;
+}
+
+
+
+@keyframes anime {
+
+
+     0% {
+        width: 0%;
+     }
+
+      100% {
+        
+        width: 100%;
+     }
+}
+
+
+
+.bg_test {
+    width: 400px;
+    height: 400px;
+   position: relative;
+    transition: 2.4s;
+    overflow: hidden;
+}
+
+
+.bg_test:after {
+   position: absolute;
+   top: 0;
+   content: "";
+   left: 0;
+   background-image: url("photo-1505481454812-642d2c1a7da9.jpg");
+   background-size: cover;
+   background-position: left;
+   width: 100%;
+   height: 100%;
+   transform: scale(1.3);
+   transition: 2.4s;
+
+}
+
+.bg_test.JS:after {
+    transform: scale(1);
+}

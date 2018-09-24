@@ -452,3 +452,67 @@ $("#left").click(function(){
 	curr--;
 
 })
+
+
+
+
+// zoom
+
+$('.jzoom').jzoom({bgColor: "#222"});
+
+
+ var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+
+
+
+
+
+$(".imgs").on("click","img",function(){
+
+	var surce = $(this).attr("src")
+
+
+	$(".jzoom img").attr("src",surce);
+
+
+})
+
+
+
+
+
+///
+
+
+$(document).ready(function(){
+
+	var k = setInterval(function(){
+	var w = $(".wraper").width();
+	var wP = $("#wrapp").width();
+	var calc = Math.floor(w / wP * 100) 
+	$(".wraper").text(calc + "%")
+		if (calc == 100) {
+			clearInterval(k)
+		}
+	},20)
+
+})
+
+
+
+// $(".bg_test").after().css("background-size","100% 100%")
+
+$('.bg_test').after().css('transform', 'scale(1)');
+
+
+$('.bg_test').addClass("JS");
